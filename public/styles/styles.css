@@ -1,37 +1,39 @@
-@keyframes slideInFromLeftTitle {
+@keyframes fadeInPage {
     from {
-      left: -100%; /* Element zaczyna poza ekranem po lewej stronie */
       opacity: 0;
     }
     to {
-      left: 50%; /* Element kończy w pozycji wycentrowanej */
       opacity: 1;
     }
+  }
+  
+  .fade-in-page {
+    animation: fadeInPage 1s ease-out forwards;
   }
 
 body{
     padding: 0px;
     margin:0px;
     background-color: #F5FFFA;
+}
 a{
     text-decoration: none;
 }
 .navbar-top {
     position: relative;
     width: 100%;
-    height: 60px; /* Zdefiniowana wysokość kontenera */
+    height: 60px; 
 }
 
 .lena-kozłowska-title {
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%); /* Wycentrowanie tytułu */
+    transform: translate(-50%, -50%); 
     display: flex;
     align-items: center;
     align-content: center;
     gap:5px;
-    animation: slideInFromLeftTitle 1s ease-out;
 }
 .logo{
     display: inline;
@@ -45,16 +47,16 @@ a{
 
 .language-choice {
     position: absolute;
-    right: 0px; /* Pozycjonowanie wyboru języka po lewej stronie */
+    right: 0px; 
     top: 50%;
-    transform: translateY(-50%); /* Wyśrodkowanie w pionie */
+    transform: translateY(-50%);
 }
 .langugage-choice-underline{
     text-decoration: underline;
 }
 
 .language-choice a {
-    margin-right: 5px; /* Dystans między linkami języka */
+    margin-right: 5px; 
     font-family: Montserrat;
     color:black;
 }

@@ -1,4 +1,17 @@
-
+document.addEventListener("DOMContentLoaded", function() {
+    requestAnimationFrame(function() {
+      document.querySelectorAll('*').forEach(function(el) {
+        el.classList.add('fade-in-page');
+        
+        // Nasłuchiwanie na zakończenie animacji
+        el.addEventListener('animationend', function() {
+          el.classList.remove('fade-in-page'); // Usuwamy klasę po zakończeniu animacji
+        });
+      });
+    });
+  });
+  
+  
 
 const opinions = [
     "Tutaj są opinie twoich klientów, niezbyt długie też. Byle by mieściły się w ten prostokąt. Te strzałki służą temu by je przewijać",   
@@ -37,4 +50,3 @@ $(".opinion-swipe-right").click(function() {
         $("#opinion-text").removeClass("fade-out").addClass("fade-in");
     }, 500);
 });
-
