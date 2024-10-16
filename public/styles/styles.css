@@ -1,3 +1,14 @@
+@keyframes slideInFromLeftTitle {
+    from {
+      left: -100%; /* Element zaczyna poza ekranem po lewej stronie */
+      opacity: 0;
+    }
+    to {
+      left: 50%; /* Element kończy w pozycji wycentrowanej */
+      opacity: 1;
+    }
+  }
+
 body{
     padding: 0px;
     margin:0px;
@@ -19,15 +30,17 @@ a{
     display: flex;
     align-items: center;
     align-content: center;
-    gap:5px
+    gap:5px;
+    animation: slideInFromLeftTitle 1s ease-out;
 }
 .logo{
     display: inline;
     padding: 0px;
     margin: 0px;
     font-family: "Montserrat";
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 450;
+    text-align: center;
 }
 
 .language-choice {
@@ -63,14 +76,14 @@ a{
     justify-content: center;
     text-align: center;
     margin:0px;
-    padding: 0px;
+    padding: 0px 20px 0px 20px;
 }
 .slogan h1{
     font-family: "Montserrat";
     font-weight: 500;
-    font-size:28px;
-    margin-top:29px;
-    margin-bottom:29px;
+    font-size:20px;
+    margin-top:20px;
+    margin-bottom:20px;
 }
 
 .index-main-carousel img{
@@ -98,6 +111,9 @@ a{
     color:white;
     display: flex;
     justify-content: space-around;
+    height: 30vh;
+    align-content: center;
+    align-items: center;
 }
 .opinion{
     font-style: italic;
@@ -105,17 +121,32 @@ a{
     padding-top: 50px;
     padding-bottom: 50px;
     text-align: center;
-    font-size:12px
+    font-size:14px;
+    width:100%;
 }
 
-.opinion-swipe{
-    filter:opacity(0.5)
+
+.opinion-swipe-right, .opinion-swipe-left {
+    width: 60px; 
+    height: auto; 
+    filter: opacity(0.5);
+    transition: filter 0.3s ease; 
 }
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+}
+
 footer{
     margin-top: 45px;
     display: flex;
     flex-direction: column;
-    margin-bottom:45px;
+    margin-bottom:10px;
     gap:10px
 
 }
